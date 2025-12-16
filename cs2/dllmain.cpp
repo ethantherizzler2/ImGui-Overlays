@@ -3,10 +3,7 @@
 DWORD WINAPI MainThread(LPVOID)
 {
     Render::Init();
-
-    Sleep(200);
-
-    Notify::Push("Eclipse", "Loaded", Notify::Type::Info, 2.5f);
+   // Notify::Push("Eclipse", "Loaded", Notify::Type::Info, 2.5f); --- its buggy thats why
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID)
@@ -22,3 +19,4 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID)
 	}
     return TRUE;
 }
+
