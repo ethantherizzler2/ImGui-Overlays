@@ -86,7 +86,7 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* sc, UINT sync, UINT flags)
     return oPresent(sc, sync, flags);
 }
 
-HRESULT __stdcall hkResizeBuffers(IDXGISwapChain* sc, UINT BufferCount, UINT Width, UINT Height, DXGI_FORMAT NewFormat, UINT SwapChainFlags)
+HRESULT __stdcall ResizeBuffers(IDXGISwapChain* sc, UINT BufferCount, UINT Width, UINT Height, DXGI_FORMAT NewFormat, UINT SwapChainFlags)
 {
     if (g_RTV)
     {
@@ -169,4 +169,5 @@ void Render::Shutdown()
     MH_DisableHook(MH_ALL_HOOKS);
     MH_RemoveHook(MH_ALL_HOOKS);
     MH_Uninitialize();
+
 }
